@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist -b gh-pages"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist -b gh-pages"
   },
   "keywords": [],
   "author": "",

@@ -8,45 +8,44 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 必须添加此权限
+      contents: write
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 必须添加，获取完整提交历史
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'  # 升级到更稳定的 LTS 版本
           cache: 'npm'
 
       - name: Install Dependencies
         run: |
           echo "📦 安装依赖..."
-          npm install
+          npm ci  # 使用更可靠的依赖安装方式
           echo "✅ 安装完成"
 
-      # 👇 替换从这里开始
       - name: Build
         run: |
           echo "🚀 开始构建网站..."
-          echo "当前路径：$(pwd)"
-          echo "查看 docs 文件夹是否存在："
-          ls -la docs || echo "❌ docs 文件夹不存在！"
-
-          echo "查看 docs/.vuepress/config.js 是否存在："
-          ls -la docs/.vuepress/config.js || echo "❌ config.js 不存在！"
-
-          echo "运行 npm run build..."
-          npm run build --verbose
-
+          
+          # 修复的关键点：使用正确的构建命令
+          npm run docs:build  # 必须是 docs:build（与package.json一致）
+          
           echo "查看构建输出目录："
           ls -la ./docs/.vuepress/dist || echo "❌ 构建失败，没有生成 dist 文件夹！"
-      # 👆 到这里结束
+          
+          # 添加文件检查
+          echo "检查首页文件是否存在："
+          [ -f ./docs/.vuepress/dist/index.html ] && echo "✅ index.html 存在" || echo "❌ index.html 缺失"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ github.workspace }}/docs/.vuepress/dist
-          enable_jekyll: false # VuePress 需要此项
-          cname: lwf123-Max.github.io/myblog_2025
+          publish_dir: ./docs/.vuepress/dist  # 添加 ./ 前缀
+          enable_jekyll: false
+          keep_files: false  # 每次部署前清理旧文件
