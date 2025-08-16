@@ -3,7 +3,7 @@
 module.exports = {
   title: '我的个人博客',
   description: '记录学习与生活的点滴',
-  base: '/blogs/', // 部署到 https://robotcar.github.io/blogs/
+  base: '/myblog_2025/', // 部署到 https://lwf123-Max.github.io/myblog_2025/
 
   theme: 'reco',
 
@@ -14,7 +14,7 @@ module.exports = {
     nav: [
       { text: '🏠 首页', link: '/' },
       { text: '📚 文章', link: '/blog/' },
-      { text: 'GitHub', link: 'https://github.com/robotcar/blogs' },
+      { text: 'GitHub', link: 'https://github.com/lwf123-Max/myblog_2025' },
     ],
 
     // ✅ 左侧导航：手动配置文章结构（用于上下篇和左侧菜单）
@@ -57,7 +57,7 @@ module.exports = {
     lastUpdated: '最后更新时间',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
-    repo: 'robotcar/blogs',
+    repo: 'lwf123-Max/myblog_2025',
     repoLabel: '查看源码',
 
     search: true,
