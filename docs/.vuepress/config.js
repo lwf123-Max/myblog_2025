@@ -57,6 +57,8 @@ module.exports = {
     lastUpdated: '最后更新时间',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
+    docsRepo: 'lwf123-Max/myblog_2025',
+    docsDir: 'docs',
     repo: 'lwf123-Max/myblog_2025',
     repoLabel: '查看源码',
 
