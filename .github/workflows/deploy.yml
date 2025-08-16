@@ -1,4 +1,4 @@
-name: Deploy VuePress to GitHub Pages
+name: Deploy VuePress
 
 on:
   push:
@@ -10,44 +10,40 @@ jobs:
     permissions:
       contents: write
       pages: write
-      id-token: write  # 添加这个权限
+      id-token: write
     
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 关键！获取完整提交历史
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
           cache: 'npm'
 
       - name: Install Dependencies
         run: |
-          echo "📦 安装依赖..."
-          npm ci --legacy-peer-deps  # 添加兼容模式
-          echo "✅ 安装完成"
+          # 安装特定版本解决兼容问题
+          npm install vuepress@1.9.7 --save-exact
+          npm install vuepress-theme-reco@1.6.10 --save-exact
+          npm install @vuepress/plugin-blog@1.9.1 --save
           
-          # 添加详细调试信息
-          echo "VuePress版本: $(npm list vuepress --depth=0)"
-          echo "Node版本: $(node -v)"
-          echo "npm版本: $(npm -v)"
+          # 安装其他依赖
+          npm ci --legacy-peer-deps
 
       - name: Build
         run: |
-          echo "🚀 开始构建网站..."
-          
-          # 添加环境变量解决路径问题
+          # 增加内存限制
           export NODE_OPTIONS="--max-old-space-size=4096"
           
-          # 使用正确的构建命令
-          npx vuepress build docs  # 直接调用vuepress命令
+          # 使用修复后的构建命令
+          npx vuepress build docs --no-cache --debug 2>&1 | tee build.log
           
-          echo "检查构建输出:"
-          ls -la ./docs/.vuepress/dist
-          [ -f ./docs/.vuepress/dist/index.html ] && echo "✅ index.html 存在" || echo "❌ index.html 缺失"
+          # 验证构建结果
+          [ -d docs/.vuepress/dist ] && echo "✅ 构建成功" || echo "❌ 构建失败"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -56,4 +52,3 @@ jobs:
           publish_dir: ./docs/.vuepress/dist
           enable_jekyll: false
           keep_files: false
-          force_orphan: true  # 强制清理旧部署
