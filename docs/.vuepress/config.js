@@ -59,6 +59,7 @@ module.exports = {
     repo: 'lwf123-Max/myblog_2025',
     branch: 'main',
     docsDir: 'docs',
+    docsBranch: 'main',
     repoLabel: '查看源码',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
