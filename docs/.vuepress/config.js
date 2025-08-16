@@ -20,6 +20,7 @@ module.exports = {
     // ✅ 左侧导航：手动配置文章结构（用于上下篇和左侧菜单）
     sidebar: {
       '/blog/': [
+        '',
         {
           title: '✨ 初始文章',
           children: [
