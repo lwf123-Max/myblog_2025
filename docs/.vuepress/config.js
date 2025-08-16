@@ -55,13 +55,16 @@ module.exports = {
 
     // 其他功能
     lastUpdated: '最后更新时间',
+    docsRepo: 'lwf123-Max/myblog_2025',
+    repo: 'lwf123-Max/myblog_2025',
+    branch: 'main',
+    docsDir: 'docs',
+    repoLabel: '查看源码',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
-    docsRepo: 'lwf123-Max/myblog_2025',
-    docsDir: 'docs',
-    repo: 'lwf123-Max/myblog_2025',
-    repoLabel: '查看源码',
-
+    editLink: ({ filePath }) => {
+      return `https://github.com/lwf123-Max/myblog_2025/edit/main/docs/${filePath}`
+    },
     search: true,
     searchMaxSuggestions: 10,
     smoothScroll: true,
