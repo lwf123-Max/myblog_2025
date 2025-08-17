@@ -47,10 +47,17 @@ jobs:
       - name: Build site
         run: npm run docs:build
         
+      - name: Move files to /docs
+        run: |
+          # 清空docs目录（保留目录结构）
+          rm -rf ./docs/*
+          # 将构建文件复制到/docs目录
+          cp -r docs/.vuepress/dist/* ./docs/
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vuepress/dist
+          path: ./docs
           
       - name: Deploy to GitHub Pages
         id: deployment
