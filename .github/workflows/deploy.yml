@@ -15,9 +15,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -27,19 +25,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
-      - name: Verify files
-        run: |
-          echo "项目结构:"
-          ls -la
-          echo "VuePress 配置:"
-          ls -la docs/.vuepress/
-          [ -f docs/.vuepress/config.mjs ] && echo "✅ config.mjs 存在" || echo "❌ config.mjs 缺失"
-        
-      - name: Build
+      - name: Build site
         run: npm run docs:build
         
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: docs/.vuepress/dist
+          
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: docs/.vuepress/dist
