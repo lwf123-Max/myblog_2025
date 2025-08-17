@@ -24,9 +24,12 @@ jobs:
           
       - name: Clean cache
         run: |
-          rm -rf node_modules/.cache || true
-          echo "Cache cleaned"
+          npm cache clean --force
+          rm -rf node_modules
           
+      - name: Install dependencies
+        run: npm ci  # 更严格的全新安装
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
