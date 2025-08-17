@@ -277,11 +277,13 @@ git push -u origin main
 ### 工作流查看
 
 到这一步你点开github仓库中的Actions
-![image-20250817215553414](C:\Users\33279\AppData\Roaming\Typora\typora-user-images\image-20250817215553414.png)
+![](../.vuepress/public/images/blog/actions.png)
 
 若最新的***工作流***左边的圆圈打着绿色的√，说明你的自动部署已经快成功了，此时点开你的个人博客网址，可能出现404这样的问题。
 
-### 博客网址404**解决**方法		![273dbb5b-98a2-47c2-9e6d-9671222c6bee](D:\Tencent\WeChat\xwechat_files\wxid_9z473ypw8d3l22_456d\temp\InputTemp\273dbb5b-98a2-47c2-9e6d-9671222c6bee.png)
+### 博客网址404**解决**方法
+
+![](../.vuepress/public/images/blog/settings_pages.png)
 
 修改Pages中的这些参数：
 
