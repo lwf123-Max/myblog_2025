@@ -42,6 +42,17 @@ export default {
         lineNumbers: true,
       },
     },
+
+        // 添加深色模式配置（可选）
+    darkmode: 'toggle', // 开启深色模式切换按钮
+    
+    // 添加自定义主题变量
+    themeColor: {
+      yellow: '#fbd82b',
+      red: '#f44336',
+      green: '#4caf50',
+      blue: '#2196f3',
+    }
   }),
   
   markdown: {
