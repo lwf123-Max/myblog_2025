@@ -4,7 +4,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist -b gh-pages"
+    "deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist -b gh-pages --no-history --dotdot ."
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",

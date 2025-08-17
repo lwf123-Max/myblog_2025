@@ -1,1 +1,1 @@
-export const store = JSON.parse("[\"/tag/\",\"/blog/\",\"/\",\"/blog/cjlulwf.html\",\"/blog/hello.html\",\"/posts/\"]");
+export const store = JSON.parse("[\"/\",\"/blog/cjlulwf.html\",\"/blog/hello.html\",\"/blog/\",\"/posts/\",\"/tag/\"]");

@@ -1,3 +1,16 @@
 import comp from "D:/docLog/docs/.vuepress/.temp/pages/blog/hello.html.vue"
-const data = JSON.parse("{\"path\":\"/blog/hello.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"git\":{\"createdTime\":1755356050000,\"updatedTime\":1755361857000,\"contributors\":[{\"name\":\"lwf-ssh123\",\"username\":\"lwf-ssh123\",\"email\":\"3327994201@qq.com\",\"commits\":1,\"url\":\"https://github.com/lwf-ssh123\"},{\"name\":\"lwf123-Max\",\"username\":\"lwf123-Max\",\"email\":\"3327994201@qq.com\",\"commits\":1,\"url\":\"https://github.com/lwf123-Max\"}]},\"readingTime\":{\"minutes\":0,\"words\":0},\"filePathRelative\":\"blog/hello.md\",\"excerpt\":\"\"}")
+const data = JSON.parse("{\"path\":\"/blog/hello.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"readingTime\":{\"minutes\":0,\"words\":0},\"filePathRelative\":\"blog/hello.md\",\"excerpt\":\"\"}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

@@ -1,3 +1,16 @@
 import comp from "D:/docLog/docs/.vuepress/.temp/pages/blog/index.html.vue"
-const data = JSON.parse("{\"path\":\"/blog/\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"git\":{\"createdTime\":1755365222000,\"updatedTime\":1755365222000,\"contributors\":[{\"name\":\"lwf123-Max\",\"username\":\"lwf123-Max\",\"email\":\"3327994201@qq.com\",\"commits\":1,\"url\":\"https://github.com/lwf123-Max\"}]},\"readingTime\":{\"minutes\":0.12,\"words\":35},\"filePathRelative\":\"blog/README.md\",\"excerpt\":\"<p># 📚 所有文章</p>\\n<p>这里是您所有博客文章的集合：</p>\\n<p>- [Hello 世界](hello)</p>\\n<p>- [关于 cjlulwf](cjlulwf)</p>\\n<blockquote>\\n<p>更多文章正在创作中...</p>\\n</blockquote>\\n\"}")
+const data = JSON.parse("{\"path\":\"/blog/\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"readingTime\":{\"minutes\":0.12,\"words\":35},\"filePathRelative\":\"blog/README.md\",\"excerpt\":\"<p># 📚 所有文章</p>\\n<p>这里是您所有博客文章的集合：</p>\\n<p>- [Hello 世界](hello)</p>\\n<p>- [关于 cjlulwf](cjlulwf)</p>\\n<blockquote>\\n<p>更多文章正在创作中...</p>\\n</blockquote>\\n\"}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
