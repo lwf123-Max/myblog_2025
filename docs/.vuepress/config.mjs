@@ -26,7 +26,7 @@ export default {
         {
           text: "✨ 初始文章",
           collapsible: true,
-          children: ["hello.md", "cjlulwf.md"],
+          children: ["hello.md", "cjlulwf.md", "customBg.md"],
         }
       ]
     },
