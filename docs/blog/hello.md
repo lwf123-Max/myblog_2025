@@ -277,6 +277,7 @@ git push -u origin main
 ### 工作流查看
 
 到这一步你点开github仓库中的Actions
+
 ![](../.vuepress/public/images/blog/actions.png)
 
 若最新的***工作流***左边的圆圈打着绿色的√，说明你的自动部署已经快成功了，此时点开你的个人博客网址，可能出现404这样的问题。
@@ -300,9 +301,6 @@ Branch: gh-pages
 以下是我的`docs`的tree，仅供参考
 
 ```
-D:\docLog\docs>tree
-卷 GreatWall 的文件夹 PATH 列表
-卷序列号为 70B8-3314
 D:.
 ├─.vuepress
 │  ├─.cache
@@ -329,15 +327,19 @@ D:.
 │  │  ├─sass-palette
 │  │  ├─shiki
 │  │  └─theme-hope
-│  └─dist
-│      ├─article
-│      ├─assets
-│      ├─blog
-│      ├─category
-│      ├─posts
-│      ├─star
-│      ├─tag
-│      └─timeline
-└─blog
+│  ├─dist
+│  │  ├─article
+│  │  ├─assets
+│  │  ├─blog
+│  │  ├─category
+│  │  ├─posts
+│  │  ├─star
+│  │  ├─tag
+│  │  └─timeline
+│  └─public
+│      └─images
+│          └─blog
+├─blog
+└─tag
 ```
 
