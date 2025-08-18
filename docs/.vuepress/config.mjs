@@ -10,12 +10,20 @@ export default {
   // 添加 bundler 配置
   bundler: viteBundler(),
   plugins: [
-    searchProPlugin({
-      indexContent: true,
-      customFields: [
-        { getter: (page) => page.frontmatter.category, formatter: "分类: $content" },
-        { getter: (page) => page.frontmatter.tag, formatter: "标签: $content" }
-      ]
+    slimsearchPlugin({  // 使用 slimsearchPlugin 替代 searchProPlugin
+      indexContent: true,    // ✅ 保留全文搜索功能
+      searchFields: [        // ✅ 替换 customFields
+        {
+          getter: (page) => page.frontmatter.category,
+          formatter: "分类: $content" // 分类字段的格式化文本
+        },
+        {
+          getter: (page) => page.frontmatter.tag,
+          formatter: "标签: $content" // 标签字段的格式化文本
+        }
+      ],
+      // 可选：添加中文分词支持（需额外安装）
+      // indexOptions: { tokenize: "segment" } 
     })
   ],
   theme: hopeTheme({
