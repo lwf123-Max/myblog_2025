@@ -2,10 +2,11 @@
 title: ROS小车
 date: 2025-08-17
 categories:
-  - 所见所想
+  - 小教程
 tags:
-  - 比赛
+  - 学习
   - 随笔
+
 ---
 
 # ROS入门
