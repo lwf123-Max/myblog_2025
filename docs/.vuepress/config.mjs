@@ -12,14 +12,14 @@ export default {
   theme: hopeTheme({
     navbar: [
       { text: '🏠 首页', link: '/' },
+      { text: "💫 分类", link: "/category/" },  // 指向分类索引页
+      { text: "🎠 标签", link: "/tag/" },  
       { text: '📚 文章', link: '/blog/' },
       { 
-        text: 'GitHub', 
+        text: '💻 GitHub', 
         link: 'https://github.com/lwf123-Max/myblog_2025',
         icon: "github" 
       },
-      { text: "分类", link: "/category/" },  // 指向分类索引页
-      { text: "标签", link: "/tag/" }  
     ],
     
     sidebar: {
