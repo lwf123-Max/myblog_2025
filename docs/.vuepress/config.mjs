@@ -3,18 +3,13 @@ import { viteBundler } from '@vuepress/bundler-vite';
 import { hopeTheme } from 'vuepress-theme-hope';
 
 export default {
-  title: '我的个人博客',
-  description: '记录学习与生活的点滴',
+  title: 'My Blog',
+  description: 'Record my learning and life',
   base: '/myblog_2025/',
-  
   // 添加 bundler 配置
   bundler: viteBundler(),
   
   theme: hopeTheme({
-    category: { location: 2, text: "分类" },
-    tag: { location: 3, text: "标签" },
-    archive: { location: 4, text: "归档" },
-
     navbar: [
       { text: '🏠 首页', link: '/' },
       { text: '📚 文章', link: '/blog/' },
@@ -23,6 +18,8 @@ export default {
         link: 'https://github.com/lwf123-Max/myblog_2025',
         icon: "github" 
       },
+      { text: "分类", link: "/category/" },  // 指向分类索引页
+      { text: "标签", link: "/tag/" }  
     ],
     
     sidebar: {
@@ -42,8 +39,7 @@ export default {
     
     blog: {
       name: "我的博客",
-      description: "记录学习与生活的点滴",
-      perPage: 10        // 每页显示文章数量（注意属性名改为perPage）
+      description: "记录学习与生活的点滴"
     },
     
     plugins: {

@@ -1,1 +1,4 @@
-# 分类
+---
+layout: CategoryIndex
+title: 文章分类
+---

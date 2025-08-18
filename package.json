@@ -4,10 +4,10 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist -b gh-pages --no-history --dotdot .",
-    "create:blog": "mkdir -p docs/{category,tag,archive} && echo '# 分类' > docs/category/README.md && echo '# 标签' > docs/tag/README.md && echo '# 归档' > docs/archive/README.md"
+    "deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist -b gh-pages --no-history --dotdot ."
   },
   "devDependencies": {
+    "@vuepress/plugin-docsearch": "^2.0.0-rc.112",
     "gh-pages": "^6.3.0",
     "sass-embedded": "^1.90.0",
     "vuepress": "^2.0.0-rc.24",
