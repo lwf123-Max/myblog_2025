@@ -12,21 +12,21 @@ tags:
 
 ## NO.1 学习C语言、C++：
 
-1. 学c语言就看浙大温恺c语言:【浙江大学翁恺教你C语言程序设计！C语言基础入门！】 https://www.bilibili.com/video/BV1dr4y1n7vA/?share_source=copy_web&vd_source=7c149f1c6707f644bfee88536c3310c6
-2. 学c++看黑马：【黑马程序员匠心之作|C++教程从0到1入门编程,学习编程不再难】 https://www.bilibili.com/video/BV1et411b73Z/?p=203&share_source=copy_web&vd_source=7c149f1c6707f644bfee88536c3310c6 (学到vector容器就 ojbk 了，可以再去学学C++多线程)
-3. C++ Vector教程： https://blog.csdn.net/qq_40713201/article/details/126740586?fromshare=blogdetail&sharetype=blogdetail&sharerId=126740586&sharerefer=PC&sharesource=2301_79844835&sharefrom=from_link
+1. 学c语言就看浙大温恺c语言:[浙江大学翁恺教你C语言程序设计！C语言基础入门！](https://www.bilibili.com/video/BV1dr4y1n7vA/?share_source=copy_web&vd_source=7c149f1c6707f644bfee88536c3310c6)
+2. 学c++看黑马：[黑马程序员匠心之作|C++教程从0到1入门编程,学习编程不再难](https://www.bilibili.com/video/BV1et411b73Z/?p=203&share_source=copy_web&vd_source=7c149f1c6707f644bfee88536c3310c6 )(学到vector容器就 ojbk 了，可以再去学学C++多线程)
+3. [C++ Vector教程]( https://blog.csdn.net/qq_40713201/article/details/126740586?fromshare=blogdetail&sharetype=blogdetail&sharerId=126740586&sharerefer=PC&sharesource=2301_79844835&sharefrom=from_link)
 
 ## NO.2.0 安装双系统/配置虚拟机/配置WSL2
 
-1. 安装双系统教程：https://blog.csdn.net/qq_40713201/article/details/126740586?fromshare=blogdetail&sharetype=blogdetail&sharerId=126740586&sharerefer=PC&sharesource=2301_79844835&sharefrom=from_link
+1. 双系统：[安装双系统教程](https://blog.csdn.net/qq_40713201/article/details/126740586?fromshare=blogdetail&sharetype=blogdetail&sharerId=126740586&sharerefer=PC&sharesource=2301_79844835&sharefrom=from_link)
 2. 配置虚拟机：自己找教程哦，著名的csdn上面有很多教程，建议找最新的看
-3. WSL：全网最全Win10/11系统下WSL2+Ubuntu20.04的全流程安装指南（两种支持安装至 D 盘方式）_win10安装wsl2-CSDN博客](https://blog.csdn.net/Natsuago/article/details/145594631?spm=1001.2014.3001.5506)
+3. WSL：[全网最全Win10/11系统下WSL2+Ubuntu20.04的全流程安装指南（两种支持安装至 D 盘方式）_win10安装wsl2-CSDN博客](https://blog.csdn.net/Natsuago/article/details/145594631?spm=1001.2014.3001.5506)
 
 ps: 一键安装ros，这就不得不提到我们伟大无私的小鱼了，在安装好的ubuntu系统中，ctrl + alt + T打开终端，键入`wget http://fishros.com/install -O fishros && . fishros` 这样按着默认操作来就OK啦！
 
 ## NO.2 学习ROS1-noetic
 
-教程放这里：【【Autolabor初级教程】ROS机器人入门】 https://www.bilibili.com/video/BV1Ci4y1L7ZZ/?share_source=copy_web&vd_source=7c149f1c6707f644bfee88536c3310c6
+教程放这里：[【Autolabor初级教程】ROS机器人入门](https://www.bilibili.com/video/BV1Ci4y1L7ZZ/?share_source=copy_web&vd_source=7c149f1c6707f644bfee88536c3310c6)
 
 跟着赵虚左老师学准没错！视频配套文档看这里 --> [Introduction · Autolabor-ROS机器人入门课程《ROS理论与实践》零基础教程](http://www.autolabor.com.cn/book/ROSTutorials/index.html)  (tips: 第2/4/5/7/10这五章是重点，要重点学习)
 
