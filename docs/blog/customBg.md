@@ -31,45 +31,55 @@ docs/
 编辑 `docs/.vuepress/styles/index.scss`文件：
 
 ```
-$bg-image: url('/myblog_2025/images/bg-main.jpg'); // 使用你的图片路径
-
-// 整个页面背景
+// 设置全局背景
 body {
-  background-image: $bg-image;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: url('/images/test03.jpeg'); // 使用public目录相对路径
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
   
-  // 添加半透明遮罩（提高文字可读性）
-  &:before {
+  // 半透明遮罩层（提高文字可读性）
+  &::before {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.85); // 浅色遮罩（适合深色背景）
+    background-color: rgba(255, 255, 255, 0.85); // 浅色遮罩
     z-index: -1;
   }
 }
 
-// 内容区域背景（保持原设计）
+// 内容区域样式优化
 .theme-container .page {
-  background-color: rgba(255, 255, 255, 0.7); // 半透明白色背景
-  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-// 深色模式适配（可选）
+// 深色模式适配
 .darkmode {
-  &:before {
-    background-color: rgba(0, 0, 0, 0.6); // 深色遮罩（适合浅色背景）
+  &::before {
+    background-color: rgba(0, 0, 0, 0.6); // 深色遮罩
   }
   
   .theme-container .page {
-    background-color: rgba(30, 30, 32, 0.7); // 深色内容背景
+    background-color: rgba(30, 30, 32, 0.8);
+  }
+}
+
+// 移动端优化
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+  
+  .theme-container .page {
+    padding: 1rem;
+    margin: 0.5rem;
   }
 }
 ```
