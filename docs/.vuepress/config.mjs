@@ -1,14 +1,23 @@
 // docs/.vuepress/config.mjs
 import { viteBundler } from '@vuepress/bundler-vite';
 import { hopeTheme } from 'vuepress-theme-hope';
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 export default {
-  title: 'My Blog',
+  title: '🤖 My Blog',
   description: 'Record my learning and life',
   base: '/myblog_2025/',
   // 添加 bundler 配置
   bundler: viteBundler(),
-  
+  plugins: [
+    searchProPlugin({
+      indexContent: true,
+      customFields: [
+        { getter: (page) => page.frontmatter.category, formatter: "分类: $content" },
+        { getter: (page) => page.frontmatter.tag, formatter: "标签: $content" }
+      ]
+    })
+  ],
   theme: hopeTheme({
     navbar: [
       { text: '🏠 首页', link: '/' },
@@ -38,13 +47,12 @@ export default {
     },
     
     blog: {
-      name: "我的博客",
-      description: "记录学习与生活的点滴"
+      name: "🐒 我的博客",
+      description: "大学学习生活的日志记录"
     },
     
     plugins: {
       blog: true,
-      search: true,
       mdEnhance: {
         lineNumbers: true,
       },

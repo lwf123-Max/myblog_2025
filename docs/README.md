@@ -12,7 +12,7 @@ features:
     details: 按主题组织内容
   - title: 标签
     details: 快速查找感兴趣的内容
-footer: MIT Licensed | Copyright © 2025 你的名字
+footer: MIT Licensed | Copyright © 2025 Maple
 ---
 
 ## 📌 最新动态
