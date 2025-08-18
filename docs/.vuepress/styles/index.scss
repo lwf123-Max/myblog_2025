@@ -61,12 +61,12 @@ body {
 
 // 移动端优化
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2.2rem !important; }
-  .tagline { font-size: 1.2rem !important; }
   body {
     background-attachment: scroll;
   }
   
+  .hero h1 { font-size: 2.2rem !important; }
+  .tagline { font-size: 1.2rem !important; }
   .theme-container .page {
     padding: 1rem;
     margin: 0.5rem;
