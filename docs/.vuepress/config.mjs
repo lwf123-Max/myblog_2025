@@ -39,6 +39,20 @@ export default {
     blog: {
       name: "我的博客",
       description: "记录学习与生活的点滴",
+      
+      category: {
+        location: 2,     // 在导航栏中的位置（第2位）
+        text: "分类"     // 导航栏显示文本
+      },
+      tag: {
+        location: 3,     // 在导航栏中的位置（第3位）
+        text: "标签"     // 导航栏显示文本
+      },
+      archive: {
+        location: 4,     // 在导航栏中的位置（第4位）
+        text: "归档"     // 导航栏显示文本
+      },
+      perPage: 10        // 每页显示文章数量（注意属性名改为perPage）
     },
     
     plugins: {
