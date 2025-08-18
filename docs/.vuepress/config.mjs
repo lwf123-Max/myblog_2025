@@ -1,7 +1,7 @@
 // docs/.vuepress/config.mjs
 import { viteBundler } from '@vuepress/bundler-vite';
 import { hopeTheme } from 'vuepress-theme-hope';
-import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { slimsearchPlugin } from '@vuepress/plugin-slimsearch';
 
 export default {
   title: '🤖 My Blog',
@@ -23,7 +23,7 @@ export default {
         }
       ],
       // 可选：添加中文分词支持（需额外安装）
-      // indexOptions: { tokenize: "segment" } 
+      indexOptions: { tokenize: "segment" } 
     })
   ],
   theme: hopeTheme({
