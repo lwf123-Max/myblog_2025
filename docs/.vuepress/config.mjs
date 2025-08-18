@@ -1,7 +1,6 @@
 // docs/.vuepress/config.mjs
 import { viteBundler } from '@vuepress/bundler-vite';
 import { hopeTheme } from 'vuepress-theme-hope';
-import { slimsearchPlugin } from '@vuepress/plugin-slimsearch';
 
 export default {
   title: '🤖 My Blog',
@@ -9,23 +8,6 @@ export default {
   base: '/myblog_2025/',
   // 添加 bundler 配置
   bundler: viteBundler(),
-  plugins: [
-    slimsearchPlugin({  // 使用 slimsearchPlugin 替代 searchProPlugin
-      indexContent: true,    // ✅ 保留全文搜索功能
-      searchFields: [        // ✅ 替换 customFields
-        {
-          getter: (page) => page.frontmatter.category,
-          formatter: "分类: $content" // 分类字段的格式化文本
-        },
-        {
-          getter: (page) => page.frontmatter.tag,
-          formatter: "标签: $content" // 标签字段的格式化文本
-        }
-      ],
-      // 可选：添加中文分词支持（需额外安装）
-      indexOptions: { tokenize: "segment" } 
-    })
-  ],
   theme: hopeTheme({
     navbar: [
       { text: '🏠 首页', link: '/' },
@@ -64,6 +46,13 @@ export default {
       mdEnhance: {
         lineNumbers: true,
       },
+      slimsearch: {  // ✅ 主题内置配置项
+        indexContent: true,
+        searchFields: [
+          { getter: (page) => page.frontmatter.category, formatter: "分类: $content" },
+          { getter: (page) => page.frontmatter.tag, formatter: "标签: $content" }
+        ]
+      }
     },
 
         // 添加深色模式配置（可选）
@@ -79,6 +68,8 @@ export default {
   }),
   
   markdown: {
+    theme: "github-dark", // 可选：高亮主题（如 "material-default"）
+    languages: ["javascript", "python", "bash"], // 需高亮的语言
     toc: {
       level: [2, 3]
     }
