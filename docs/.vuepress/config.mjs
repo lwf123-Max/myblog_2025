@@ -31,7 +31,7 @@ export default {
         {
           text: "✨ 智能车",
           collapsible: true,
-          children: ["car01.md", "ROS2的日志dz.md", "互斥锁小文本.md", "屠学长的渡众有感.md"],
+          children: ["car01.md", "渡众ROS2-foxy的尝试.md", "互斥锁小文本.md", "屠学长的渡众有感.md"],
         }
       ]
     },
