@@ -1,8 +1,8 @@
 ---
 title: 渡众ROS2-foxy的尝试 
-date: 2025-08-17
+date: 2025-05-07
 categories:
-  - ROS2渡众
+  - 日志
 tags:
   - 学习
   - 失败经历
