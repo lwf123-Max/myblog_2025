@@ -4,7 +4,8 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist -b gh-pages --no-history --dotdot ."
+    "deploy": "npm run docs:build && gh-pages -d docs/.vuepress/dist -b gh-pages --no-history --dotdot .",
+    "create:blog": "mkdir -p docs/{category,tag,archive} && echo '# 分类' > docs/category/README.md && echo '# 标签' > docs/tag/README.md && echo '# 归档' > docs/archive/README.md"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
