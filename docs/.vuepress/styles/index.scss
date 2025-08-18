@@ -37,9 +37,32 @@ body {
     background-color: rgba(30, 30, 32, 0.8);
   }
 }
+/* 主标题样式 */
+.hero h1 {
+  font-size: 2.8rem !important;    // 大字号突出主标题
+  font-weight: 700 !important;      // 粗体增强层次感
+  color: #2c3e50 !important;        // 深蓝灰色提升权威感
+  margin-bottom: 0.6rem !important; // 与副标题间距控制
+}
+
+/* 副标题样式 */
+.tagline {
+  font-size: 1.4rem !important;     // 小于主标题字号
+  font-weight: 400 !important;
+  color: #7f8c8d !important;        // 中性灰色弱化次要信息
+  font-style: italic !important;    // 斜体增加亲和力
+  letter-spacing: 1px !important;   // 字距微调提升呼吸感
+}
+
+/* 居中对齐 */
+.hero {
+  text-align: center !important;
+}
 
 // 移动端优化
 @media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem !important; }
+  .tagline { font-size: 1.2rem !important; }
   body {
     background-attachment: scroll;
   }
