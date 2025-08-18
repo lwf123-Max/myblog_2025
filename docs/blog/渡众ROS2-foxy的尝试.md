@@ -1,5 +1,5 @@
 ---
-title:渡众ROS2-foxy的尝试 
+title: 渡众ROS2-foxy的尝试 
 date: 2025-08-17
 categories:
   - ROS2渡众
