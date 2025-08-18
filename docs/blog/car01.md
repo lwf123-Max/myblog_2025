@@ -40,4 +40,9 @@ tips: [在GAZEBO仿真中用Blender搭建属于你自己的模型](https://www.b
 
 ## NO.3 有需要再继续学习ROS2
 
-***humble教程***
+***humble教程***：
+
+教程文档：
+
+ [ROS2理论与实践.pdf](ROS2理论与实践.pdf) 
+
